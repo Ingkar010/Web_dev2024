@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function randomInteger(min, max) {
+                let rand = min - 0.5 + Math.random() * (max - min + 1);
+                return Math.round(rand);
+            }
+
+            alert( randomInteger(1, 3) );
+
+            function randomInteger1(min, max) {
+                let rand = min + Math.random() * (max + 1 - min);
+                return Math.floor(rand);
+            }
+
+            alert( randomInteger1(1, 3) );
+        </script>
+    </body>
+</html>

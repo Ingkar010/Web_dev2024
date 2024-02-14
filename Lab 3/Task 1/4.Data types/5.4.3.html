@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            let arr = ["a", "b"];
+
+            arr.push(function() {
+                alert( this );
+            })
+
+            arr[2](); // a,b,function(){...}
+        </script>
+    </body>
+</html>

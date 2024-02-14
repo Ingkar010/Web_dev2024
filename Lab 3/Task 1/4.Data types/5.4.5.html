@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function getMaxSubSum(myaArr) {
+                let maxSumi = 0;
+                for (let i = 0; i < myaArr.length; i++) {
+                    let sumFixedStart = 0;
+                    for (let j = i; j < myaArr.length; j++) {
+                        sumFixedStart += myaArr[j];
+                        maxSumi = Math.max(maxSumi, sumFixedStart);
+                    }
+                }
+                return maxSumi;
+            }
+            alert( getMaxSubSum([-1, 2, 3, -9]) ); // 5
+            alert( getMaxSubSum([-1, 2, 3, -9, 11]) ); // 11
+            alert( getMaxSubSum([-2, -1, 1, 2]) ); // 3
+            alert( getMaxSubSum([100, -9, 2, -3, 5]) ); // 100
+            alert( getMaxSubSum([1, 2, 3]) ); // 6
+            alert( getMaxSubSum([-1, -2, -3]) ); // 0
+        </script>
+    </body>
+</html>
