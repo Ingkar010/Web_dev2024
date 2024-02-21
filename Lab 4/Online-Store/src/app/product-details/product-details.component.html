@@ -1,0 +1,19 @@
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <div class="photos">
+    <input type="checkbox" class="item">
+    <div class="slide" slide="2">
+      <img [src] = "product.img2" alt="picture">
+    </div>
+
+    <input type="checkbox" class="item">
+
+    <div class="slide" slide="1">
+      <img [src] = "product.img" alt="picture">
+    </div>
+
+  </div>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>
